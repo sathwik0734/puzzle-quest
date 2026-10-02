@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puzzle Quest</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Home Screen -->
+        <section id="homeScreen" class="screen">
+            <h1>🎮 Puzzle Quest</h1>
+            <p>Arrange the numbers in the correct order!</p>
+
+            <input type="text" id="playerName" placeholder="Enter your name">
+
+            <button onclick="startGame()">Start Game</button>
+            <button onclick="showLeaderboard()">🏆 Leaderboard</button>
+
+            <div class="instructions">
+                <h3>How to Play</h3>
+                <p>Click a tile next to the empty space to move it.</p>
+                <p>Arrange all numbers from 1 to 8.</p>
+            </div>
+        </section>
+
+        <!-- Game Screen -->
+        <section id="gameScreen" class="screen hidden">
+
+            <div class="top-bar">
+                <div>
+                    <strong>Player:</strong>
+                    <span id="displayPlayer">Player</span>
+                </div>
+
+                <div>
+                    <strong>Level:</strong>
+                    <span id="level">1</span>
+                </div>
+
+                <div>
+                    <strong>Moves:</strong>
+                    <span id="moves">0</span>
+                </div>
+
+                <div>
+                    <strong>Time:</strong>
+                    <span id="timer">00:00</span>
+                </div>
+
+                <div>
+                    <strong>Score:</strong>
+                    <span id="score">0</span>
+                </div>
+            </div>
+
+            <canvas id="gameCanvas" width="360" height="360"></canvas>
+
+            <div class="buttons">
+                <button onclick="shufflePuzzle()">🔀 Shuffle</button>
+                <button onclick="restartLevel()">🔄 Restart</button>
+                <button onclick="goHome()">🏠 Home</button>
+            </div>
+
+            <p id="message"></p>
+
+        </section>
+
+        <!-- Leaderboard -->
+        <section id="leaderboardScreen" class="screen hidden">
+
+            <h1>🏆 Leaderboard</h1>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Player</th>
+                        <th>Level</th>
+                        <th>Score</th>
+                    </tr>
+                </thead>
+
+                <tbody id="leaderboardBody"></tbody>
+            </table>
+
+            <button onclick="goHome()">🏠 Back</button>
+            <button onclick="clearLeaderboard()">🗑️ Clear</button>
+
+        </section>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
