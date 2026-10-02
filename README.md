@@ -1,0 +1,1 @@
+Puzzle Quest is a browser-based sliding puzzle game developed using HTML, CSS, and JavaScript. The game demonstrates JavaScript game logic, HTML5 Canvas rendering, animations, level progression, score calculation, and client-side state management.
